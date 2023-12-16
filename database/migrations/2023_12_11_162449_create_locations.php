@@ -3,7 +3,6 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-use App\Enum\Status;
 
 return new class extends Migration
 {
@@ -12,15 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('flights', function (Blueprint $table) {
+        Schema::create('locations', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->text('description');
-            $table->float('price', 2);
-            $table->foreignId('author_id')->constrained('user');
-            $table->string('status')->default(Status::Draft);
             $table->timestamps();
-            $table->softDeletes();
         });
     }
 
@@ -29,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('flights');
+        Schema::dropIfExists('locations');
     }
 };
