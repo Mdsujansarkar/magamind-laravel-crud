@@ -2,13 +2,12 @@
 
 namespace Database\Factories;
 
-use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Offer>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Location>
  */
-class OfferFactory extends Factory
+class LocationFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -19,10 +18,6 @@ class OfferFactory extends Factory
     {
         return [
             'title' => fake()->sentence(),
-            'description' => fake()->sentence(),
-            'price' => fake()->randomNumber(),
-            'status' => 'Draft',
-            'author_id' => User::factory(),
         ];
     }
 }

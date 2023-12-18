@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Offer extends Model
 {
     use HasFactory;
+    protected $fiilable = [
+        'title',
+        'description',
+        'price',
+        'status',
+        'author_id'
+    ];
 }
