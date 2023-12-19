@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->text('description');
-            $table->float('price', 2);
+            $table->integer('price');
             $table->string('status')->default('Draft');
             $table->foreignId('author_id')->constrained('users');
             $table->softDeletes();

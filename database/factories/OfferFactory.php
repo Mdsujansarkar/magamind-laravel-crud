@@ -20,7 +20,7 @@ class OfferFactory extends Factory
         return [
             'title' => fake()->sentence(),
             'description' => fake()->sentence(),
-            'price' => fake()->randomNumber(),
+            'price' => 12,
             'status' => 'Draft',
             'author_id' => User::factory(),
         ];
